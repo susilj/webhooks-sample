@@ -4,9 +4,8 @@ namespace webhooks.Handlers
     using Microsoft.AspNetCore.Mvc;
     using Newtonsoft.Json.Linq;
     using Microsoft.AspNetCore.WebHooks;
-    using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-    public class GitHubHandler
+    public class GitHubHandler : Controller
     {
         [GitHubWebHook]
         public IActionResult GitHubRequestHandler(string id, string @event, JObject data)
